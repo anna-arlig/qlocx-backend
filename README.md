@@ -50,5 +50,6 @@ Tar emot ett id hämtat från en JWT-token, verifierar och skickar tillbaka stat
 Giltiga inloggningsuppgifter: 
 
 Email: anna.arlig@gmail.com
+
 Password: Qlocx2016
 
