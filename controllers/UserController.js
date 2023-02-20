@@ -3,7 +3,7 @@ const Token = require("../utils/token");
 
 module.exports = {
 
-  auth: (req, res, next) => {
+  auth: (req, res) => {
       const { email, password } = req.body;
       const isMatch = email === user.email && password === user.password;
       if (isMatch) {
@@ -16,7 +16,7 @@ module.exports = {
       }
   },
 
-  getById: (req, res, next) => {
+  getById: (req, res) => {
   
       const userExists = req.params.id === user.id
     
