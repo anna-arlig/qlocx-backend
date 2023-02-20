@@ -4,7 +4,6 @@ const Token = require("../utils/token");
 module.exports = {
 
   auth: (req, res, next) => {
-    try {
       const { email, password } = req.body;
       const isMatch = email === user.email && password === user.password;
       if (isMatch) {
@@ -15,13 +14,10 @@ module.exports = {
       } else {
         res.status(403).send('Wrong credentials')
       }
-    } catch (error) {
-      next(error);
-    }
   },
 
   getById: (req, res, next) => {
-    try{
+  
       const userExists = req.params.id === user.id
     
       if(userExists){
@@ -29,10 +25,6 @@ module.exports = {
       }else{
         res.status(404).send('Not found')
       }
- 
-    }catch(error){
-      next(error)
-    }
   },
 
 }
