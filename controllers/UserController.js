@@ -27,7 +27,7 @@ module.exports = {
       if(userExists){
         res.json({name: user.name, email: user.email, phone: user.phone});
       }else{
-        res.status(404)
+        res.status(404).send('Not found')
       }
  
     }catch(error){
