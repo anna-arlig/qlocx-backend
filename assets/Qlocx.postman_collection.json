@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "39d5a2d6-8660-4320-883c-95913bf17f29",
+		"name": "Qlocx",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"anna.arlig@gmail.com\", \"password\":\"Qlocx2016\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3030/api/user/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"user",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMzNywiaWF0IjoxNjc2ODE3OTY3LCJleHAiOjE2NzY5MDQzNjd9.IHnJ18W30_jW79L-AWgkPWUaKQdNyumAkLHG_I51odo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3030/api/user/find/1337",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"user",
+						"find",
+						"1337"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
