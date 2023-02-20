@@ -34,3 +34,22 @@ Skriv några backend-tester för inloggningsrutten (lyckad/misslyckad inloggning
 Skriv några backend-tester för giltiga och/eller ogiltiga JWT-token i rutten som hämtar användarinfon. 
 
 Inkludera gärna dokumentation för hur en annan utvecklare ska kunna starta denna tjänst lokalt på sin egen dator. Backend-rutterna kan beskrivas med ord, men även med en Swagger-fil i yaml-format. Se exempel: https://editor.swagger.io/ 
+
+## Test
+
+För att starta: klona repot och kör "npm install". Skapa en fil ".env" i roten av projektet och lägga in variabler skickade separat. 
+
+Endpoints:
+
+POST/ api/user/auth
+Tar emot ett objekt {email, password} och returnerar en token. 
+
+GET/ api/user/find/:id
+Tar emot ett id hämtat från en JWT-token, verifierar och skickar tillbaka status 200 vid lyckad verifiering. 
+
+Giltiga inloggningsuppgifter: 
+
+Email: anna.arlig@gmail.com
+
+Password: Qlocx2016
+
