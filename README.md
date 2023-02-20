@@ -47,4 +47,8 @@ Tar emot ett objekt {email, password} och returnerar en token.
 GET/ api/user/find/:id
 Tar emot ett id hämtat från en JWT-token, verifierar och skickar tillbaka status 200 vid lyckad verifiering. 
 
+Giltiga inloggningsuppgifter: 
+
+Email: anna.arlig@gmail.com
+Password: Qlocx2016
 
