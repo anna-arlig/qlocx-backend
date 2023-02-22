@@ -11,7 +11,7 @@ export const auth = (req, res) => {
         );
         res.json({ token });
       } else {
-        res.status(403).send('Wrong credentials')
+        res.status(403).send('Ogiltiga inloggningsuppgifter')
       }
   }
 
@@ -22,6 +22,6 @@ export const auth = (req, res) => {
       if(userExists){
         res.json({name: User.name, email: User.email, phone: User.phone});
       }else{
-        res.status(404).send('Not found')
+        res.status(404).send('Användare ej hittad')
       }
   }
