@@ -1,10 +1,10 @@
-const { Router } = require("express");
-const UserController = require("../controllers/UserController");
-const user = new Router();
-const Auth = require("../middleware/auth");
+import {Router} from 'express'
+import {auth, getById} from "../controllers/UserController.js"
+import {verifyToken} from "../middleware/auth.js"
 
-user.post("/auth", UserController.auth);
+export const user = new Router();
 
-user.get("/find/:id", Auth.verifyToken, UserController.getById);
+user.post("/auth", auth);
 
-module.exports = user;
+user.get("/find/:id", verifyToken, getById);
+

@@ -1,10 +1,7 @@
-const { JWT_SECRET } = require("../config");
-const jwt = require("jsonwebtoken");
+import { JWT_SECRET } from '../config/index.js'
+import jwt from 'jsonwebtoken'
 
-
-module.exports = {
-
-  async verifyToken(req, res, next) {
+ export const verifyToken = async (req, res, next) => {
    
       try {
         const token = req.header("Authorization").replace("Bearer ", "");
@@ -16,4 +13,4 @@ module.exports = {
      catch (error) {
       next(error);
     
-  }}}
+  }}

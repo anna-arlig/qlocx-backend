@@ -1,30 +1,27 @@
-const user = {id: '1337', name: 'Anna Ärlig', email: 'anna.arlig@gmail.com', phone: '0730409156', password: 'Qlocx2016'}
-const Token = require("../utils/token");
+import {createToken} from '../utils/token.js'
 
-module.exports = {
+const User = {id: '1337', name: 'Anna Ärlig', email: 'anna.arlig@gmail.com', phone: '0730409156', password: 'Qlocx2016'}
 
-  auth: (req, res) => {
+export const auth = (req, res) => {
       const { email, password } = req.body;
-      const isMatch = email === user.email && password === user.password;
+      const isMatch = email === User.email && password === User.password;
       if (isMatch) {
-        const token = Token.createToken(
-          user.id
+        const token = createToken(
+          User.id
         );
         res.json({ token });
       } else {
         res.status(403).send('Wrong credentials')
       }
-  },
+  }
 
-  getById: (req, res) => {
+ export const getById = (req, res) => {
   
-      const userExists = req.params.id === user.id
+      const userExists = req.params.id === User.id
     
       if(userExists){
-        res.json({name: user.name, email: user.email, phone: user.phone});
+        res.json({name: User.name, email: User.email, phone: User.phone});
       }else{
         res.status(404).send('Not found')
       }
-  },
-
-}
+  }
