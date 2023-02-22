@@ -51,16 +51,16 @@ Gå in i roten av projektet och kör `npm test`.
 
 ### POST/ api/user/auth
 
-Tar emot ett objekt {email, password} och returnerar en token.
+Tar emot ett objekt `{email: 'anna.arlig@gmail.com', password: 'Qlocx2016'}` och returnerar en token.
 
 ### GET/ api/user/find/:id
 
 Tar emot ett id hämtat från en JWT-token, verifierar och skickar tillbaka status 200 vid lyckad verifiering samt ett objekt med användaruppgifter. 
 
 `{
-name: Anna Ärlig, 
-email: anna.arlig@gmail.com,
-phone: 0730409156
+name: 'Anna Ärlig', 
+email: 'anna.arlig@gmail.com',
+phone: '0730409156'
 }`
 
 ## Giltiga inloggningsuppgifter:
