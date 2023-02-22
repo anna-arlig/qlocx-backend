@@ -41,6 +41,7 @@ För att starta:
 1. Klona repot med `git clone` och använd antingen SSH eller HTTP.
 2. Navigera in i roten av projektet och kör `npm install`.
 3. Skapa en fil som heter `.env` i roten av projektet och lägg in variabler som skickats separat.
+4. Kör `npm start`.
 
 För att köra tester: 
 
