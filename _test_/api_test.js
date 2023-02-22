@@ -11,7 +11,7 @@ describe('Login tests', () => {
 
   it('should return status 200 and log in succesfully', (done) => {
     chai.request(BASE_URL)
-    .post('/auth')
+    .post('/api/user/auth')
     .set('content-type', 'application/json')
     .send({email: 'anna.arlig@gmail.com', password: 'Qlocx2016'})
     .end((error, response) => {
@@ -23,7 +23,7 @@ describe('Login tests', () => {
 
   it('should return status 403 forbidden when given wrong credentials', (done) => {
     chai.request(BASE_URL)
-    .post('/auth')
+    .post('/api/user/auth')
     .set('content-type', 'application/json')
     .send({email: 'anna.arlig@gmail.com', password: 'WrongPassword'})
     .end((error, response) => {
@@ -37,7 +37,7 @@ describe('Token tests', () => {
 
   it('should return status 200 when given a valid token', (done) => {
     chai.request(BASE_URL)
-    .get('/find/1337')
+    .get('/api/user/find/1337')
     .set({ "Authorization": `Bearer ${token}` })
     .end((error, response) => {
       expect(response).to.have.status(200);
@@ -47,7 +47,7 @@ describe('Token tests', () => {
 
   it('should return status 401 Unauthorized when given an unvalid token', (done) => {
     chai.request(BASE_URL)
-    .get('/find/1337')
+    .get('/api/user/find/1337')
     .set('content-type', 'application/json')
     .set({ "Authorization": `Bearer notAValidToken` })
     .end((error, response) => {
