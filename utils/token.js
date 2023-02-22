@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'
 import { JWT_SECRET } from '../config/index.js';
 
-export const createToken = ( id) => {
+export const createToken = (id) => {
   const newUser = {
     id
   };

@@ -10,7 +10,6 @@ import jwt from 'jsonwebtoken'
         req.user = user;
         next();
       } 
-     catch (error) {
-      next(error);
-    
+     catch {
+      res.status(401).send('Ogiltig token')
   }}

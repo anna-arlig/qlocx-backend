@@ -2,7 +2,7 @@ import {createToken} from '../utils/token.js'
 
 const User = {id: '1337', name: 'Anna Ärlig', email: 'anna.arlig@gmail.com', phone: '0730409156', password: 'Qlocx2016'}
 
-export const auth = (req, res) => {
+  export const auth = (req, res) => {
       const { email, password } = req.body;
       const isMatch = email === User.email && password === User.password;
       if (isMatch) {
@@ -15,7 +15,7 @@ export const auth = (req, res) => {
       }
   }
 
- export const getById = (req, res) => {
+  export const getById = (req, res) => {
   
       const userExists = req.params.id === User.id
     
