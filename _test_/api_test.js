@@ -9,7 +9,7 @@ chai.use(chaiHttp)
 
 describe('Login tests', () => {
 
-  it('should log in succesfully', (done) => {
+  it('should return status 200 and log in succesfully', (done) => {
     chai.request(BASE_URL)
     .post('/auth')
     .set('content-type', 'application/json')
@@ -21,7 +21,7 @@ describe('Login tests', () => {
     })
   })
 
-  it('should return 403 forbidden', (done) => {
+  it('should return status 403 forbidden when given wrong credentials', (done) => {
     chai.request(BASE_URL)
     .post('/auth')
     .set('content-type', 'application/json')
@@ -35,7 +35,7 @@ describe('Login tests', () => {
 
 describe('Token tests', () => {
 
-  it('should return status 200', (done) => {
+  it('should return status 200 when given a valid token', (done) => {
     chai.request(BASE_URL)
     .get('/find/1337')
     .set({ "Authorization": `Bearer ${token}` })
@@ -45,7 +45,7 @@ describe('Token tests', () => {
     })
   })
 
-  it('should return 401 Unauthorized', (done) => {
+  it('should return status 401 Unauthorized when given an unvalid token', (done) => {
     chai.request(BASE_URL)
     .get('/find/1337')
     .set('content-type', 'application/json')
