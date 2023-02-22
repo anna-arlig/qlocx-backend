@@ -38,9 +38,9 @@ Inkludera gärna dokumentation för hur en annan utvecklare ska kunna starta den
 
 För att starta:
 
-1. klona repot med `git clone` och använd antingen SSH eller HTTP
-2. gå in i roten av projektet och kör `npm install`.
-3. Skapa en fil som heter `.env` i roten av projektet och lägg in variabler som skickats separat
+1. Klona repot med `git clone` och använd antingen SSH eller HTTP.
+2. Gå in i roten av projektet och kör `npm install`.
+3. Skapa en fil som heter `.env` i roten av projektet och lägg in variabler som skickats separat.
 
 ## Endpoints:
 
