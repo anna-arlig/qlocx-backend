@@ -42,6 +42,11 @@ För att starta:
 2. Gå in i roten av projektet och kör `npm install`.
 3. Skapa en fil som heter `.env` i roten av projektet och lägg in variabler som skickats separat.
 
+För att köra tester: 
+
+Gå in i roten av projektet och kör `npm test`.
+
+
 ## Endpoints:
 
 ### POST/ api/user/auth
