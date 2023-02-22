@@ -1,9 +1,10 @@
 import express from 'express'
-const app = express()
 import {PORT} from './config/index.js'
 import logger from './middleware/logger.js'
 import routes from './routes/index.js'
 import cors from 'cors'
+
+const app = express()
 
 app.use(logger);
 app.use(cors());
