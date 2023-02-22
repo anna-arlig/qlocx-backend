@@ -39,23 +39,24 @@ Inkludera gärna dokumentation för hur en annan utvecklare ska kunna starta den
 För att starta:
 
 1. Klona repot med `git clone` och använd antingen SSH eller HTTP.
-2. Gå in i roten av projektet och kör `npm install`.
+2. Navigera in i roten av projektet och kör `npm install`.
 3. Skapa en fil som heter `.env` i roten av projektet och lägg in variabler som skickats separat.
 
 För att köra tester: 
 
-Gå in i roten av projektet och kör `npm test`.
-
+Navigera in i roten av projektet och kör `npm test`.
 
 ## Endpoints:
 
 ### POST/ api/user/auth
 
-Tar emot ett objekt `{email: 'anna.arlig@gmail.com', password: 'Qlocx2016'}` och returnerar en token.
+Tar emot ett objekt enligt format: `{email: 'anna.arlig@gmail.com', password: 'Qlocx2016'}` och returnerar en token.
 
 ### GET/ api/user/find/:id
 
 Tar emot ett id hämtat från en JWT-token, verifierar och skickar tillbaka status 200 vid lyckad verifiering samt ett objekt med användaruppgifter. 
+
+Ska svara med objekt enligt format: 
 
 `{
 name: 'Anna Ärlig', 
@@ -65,6 +66,6 @@ phone: '0730409156'
 
 ## Giltiga inloggningsuppgifter:
 
-Email: anna.arlig@gmail.com
+Epost: anna.arlig@gmail.com
 
-Password: Qlocx2016
+Lösenord: Qlocx2016
